@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age</title>
+  <script>
+    function displayYears() {
+      var age = parseInt(document.getElementById("age").value);
+      if (isNaN(age) || age <= 0) {
+        alert("Please enter a valid age!");
+        return;
+      }
+      var yearsReached = "";
+      for (var i = 1; i <= age; i++) {
+        yearsReached += i + " ";
+      }
+      document.getElementById("result").innerHTML = "Years reached: " + yearsReached;
+    }
+  </script>
+</head>
+<body>
+  <h1>Age</h1>
+  <label for="age">Enter your age:</label>
+  <input type="text" id="age">
+  <button onclick="displayYears()">Submit</button>
+  <p id="result"></p>
+</body>
+</html>
